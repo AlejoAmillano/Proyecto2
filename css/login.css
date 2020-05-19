@@ -1,0 +1,84 @@
+*{box-sizing: border-box;}
+body{
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5em;
+  background-color: black;
+  color: white;
+}
+
+#main_menu{
+  width: 100%;
+  position: relative;
+}
+.logo{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: "";
+  margin-left: -150px;
+  text-align: center;
+}
+#login{
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  top:180px;
+}
+legend{
+  font-size: 50px;
+}
+#form{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+label{
+  font-size: 30px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+input{
+  font-size: 20px;
+  border-radius: 5px;
+  position: relative;
+  background-color: black;
+  border: solid 1px white;
+  color: white;
+  padding: 5px;
+}
+#formulario{
+ width: 100%;
+ position: relative;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+button{
+  font-size: 180%;
+  border: solid 1px white;
+  color: white;
+  background-color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+/*tablet*/
+@media (min-width:451px) and (max-width: 750px) {
+legend{
+  font-size: 30px;
+}
+}
+/*mobile*/
+@media (min-width:100px) and (max-width:450px){
+legend{
+font-size:22px;
+}
+}

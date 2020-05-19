@@ -1,0 +1,40 @@
+#low_menu2{
+ position: absolute;
+  width: 100%;
+  background-color: #E7E2E2;
+  height: 320px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.logo2{
+ position: absolute;
+ left: 43%;
+ text-align: center;
+ top: 9%;
+}
+.nombresIntegrantes h6,
+.nombresIntegrantes h5{
+ color: black;
+}
+
+.nombresIntegrantes{
+  text-align: center;
+  position: absolute;
+  left: 42.5%;
+  top: 60%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+.logo2{
+  position: absolute;
+  left: 26%;
+  text-align: center;
+  top: 9%;
+}
+.nombresIntegrantes{
+  text-align: center;
+    position: absolute;
+    left: 25%;
+    top: 60%;
+}
+}

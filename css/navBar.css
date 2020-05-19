@@ -1,0 +1,180 @@
+*{box-sizing: border-box;}
+
+#main_menu{
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  font-family: 'Oswald', sans-serif;
+  height: 134px;
+}
+.logo{
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 49.9%;
+  top: 0;
+  content: "";
+  margin-left: -150px;
+  text-align: center;
+}
+
+.inner_main_menu{
+  margin: 0 auto;
+  width: 1170px;
+}
+.inner_main_menu ul{
+  padding: 45px;
+  list-style: none;
+  margin: 0;
+  text-align: right;
+  position: relative;
+  top: -10px;
+}
+.inner_main_menu li{
+  float: none;
+  display: inline-block;
+  position: relative;
+}
+.inner_main_menu li:nth-child(1){
+  float: left;
+}
+.inner_main_menu li:nth-child(2){
+  float: left;
+
+}
+.inner_main_menu li:nth-child(3){
+  padding-right: 30px;
+}
+.inner_main_menu li:nth-child(4){
+  padding-right: 60px;
+}
+
+.inner_main_menu li a{
+  color: grey;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+}
+
+.inner_main_menu ul li a:hover{
+  color: white;
+}
+
+.inner_main_menu ul li ul{
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+}
+.inner_main_menu ul li ul{
+  position: absolute;
+  top: 40px;
+  left: -99999px;
+  width: 200px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0;
+}
+
+.inner_main_menu ul li:hover ul{
+  left: 0;
+}
+.inner_main_menu ul li ul li{
+  float: left;
+}
+
+.inner_main_menu ul li ul li ul{
+  top: 0;
+  left: -9999px;
+}
+.inner_main_menu ul li:hover ul li ul{
+  top: 0;
+  left: -9999px;
+}
+
+.inner_main_menu ul li ul li:hover ul{
+  top: 0;
+  left: 100px;
+}
+
+.inner_main_menu ul li:hover #genres-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#genres-list {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 360px;
+}
+
+#genres-list div {
+  background-color: black;
+  padding: 10px 30px;
+  width: 50%;
+  border: solid 1px white;
+}
+
+#genres-list div a {
+  font-size: 18px;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 0;
+}
+
+.search_bar input{
+  background-color: rgba(140,114,114,0.7);
+  width: 95%;
+  border-radius: 30px;
+  height: 35%;
+  border: none;
+  padding: 10px 0px 5px 35px;
+  box-sizing: border-box;
+  top: 10px;
+  color: #fff;
+  outline: none;
+  position: relative;
+  top: -2px;
+}
+
+.btn{
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 2;
+  color: white;
+}
+
+.slicknav_menu{
+font-size: 16px;
+background:  rgba(0, 0, 0, 0.8);
+padding: 5px;
+position: fixed;
+right: 0;
+z-index: 3;
+width: 100%;
+display: none;
+}
+
+.slicknav_menu ul{
+  background: rgba(0, 0, 0, 0.8);
+  width: 80%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
+.slicknav_menu{
+  display: block;
+}
+.inner_main_menu{
+  display: none;
+}
+}

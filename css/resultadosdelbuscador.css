@@ -1,0 +1,24 @@
+*{box-sizing: border-box;}
+body{
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.5em;
+  background-color: black;
+  color: white;
+}
+
+.imagenesgenero{
+  min-height: 100%;
+  border-radius: 4px;
+}
+
+#seriesbuscador{
+  padding: 35px;
+  padding-top: 105px;
+  margin: 0 auto;
+}
+
+#hola{
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 50px;
+}
