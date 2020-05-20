@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/navBar.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+
+    </head>
+  <body>
+<header class="header">
+  <div id="main_menu">
+    <div class="logo">
+        <a href="index.html"><img src="/images/logo.png" width="50%" alt=""></a>
+    </div>
+    <div class="inner_main_menu">
+      <ul id="responsivemenu">
+        <li><a href="buscadoravanzado.html">BUSCADOR AVANZADO</a>
+
+        </li>
+        <li>
+          <a href="#">GENEROS</a>
+          <div id="genres-list">
+          </div>
+        </li>
+        <li class="search_bar">
+          <form class="buscador" action="resultadosdelbuscador.html" method="get">
+            <button class="btn"><i class="fa fa-search"></i></button>
+             <input id="buscador" type="text" name="buscarSerie" value="" required></form></li>
+        <li><a href="login.html">LOGIN</a> </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main>
+<section>
+ <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1" uk-slideshow="animation: slide; autoplay: true; autoplay-interval: 6000">
+
+      <ul class="uk-slideshow-items" uk-height-viewport="min-height: 200" id="carrusel">
+          <!-- <li>
+              <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+                  <img src="" alt="" uk-cover>
+              </div>
+              <div class="info-serie-carrusel">
+                <h2>Hola</h2>
+                <h4>Valoracion</h4>
+                <p>Sinopsis Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <h4><a href="">Trailer</a></h4>
+            </div>
+          </li> -->
+      </ul>
+
+      <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+      <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+  </div>
+</section>
+<br>
+<section class="lista-series">
+    <div class="populares uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider >
+    <div class="titles"><h2>MAS POPULARES</h2></div>
+    <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m uk-grid" id="movie-list1">
+
+        <!--<li>
+            <div class="uk-panel">
+                <img src="img/batwoman.jpg" alt="">
+                <div class="uk-position-center uk-panel"><h1>1</h1></div>
+            </div>
+        </li>-->
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider >
+  <div class="titles"><h2>Mejores Valoradas</h2></div>
+  <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m uk-grid" id="movie-list2">
+      <!--<li>
+          <div class="uk-panel">
+              <img src="img/batwoman.jpg" alt="">
+              <div class="uk-position-center uk-panel"><h1>1</h1></div>
+          </div>
+      </li>-->
+  </ul>
+
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider >
+  <div class="titles"><h2>Al Aire Hoy</h2></div>
+  <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m uk-grid" id="movie-list3">
+      <!--<li>
+          <div class="uk-panel">
+              <img src="img/batwoman.jpg" alt="">
+              <div class="uk-position-center uk-panel"><h1>1</h1></div>
+          </div>
+      </li>-->
+  </ul>
+
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div>
+<br><br><br>
+
+</section>
+
+
+</main>
+
+<footer class="footer">
+
+<div id="low_menu2">
+  <div class="logo2">
+    <img width="70%" src="img/logoTMBDblue.png" alt="">
+  </div>
+<div class="nombresIntegrantes"><h5>
+      Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+    </div>
+  </footer>
+
+<script type="text/javascript" src="/javascripts/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+<script src="https://kit.fontawesome.com/d13daeae51.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'> </script>
+<script src="/javascripts/navBar.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#responsivemenu').slicknav();
+  });
+</script>
+  </body>
+</html>

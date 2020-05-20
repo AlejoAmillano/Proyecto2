@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Series por género</title>
+    <link rel="stylesheet" href="/stylesheets/seriesporgenero.css">
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/navBar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+
+  </head>
+  <body>
+    <header class="header">
+      <div id="main_menu">
+        <div class="logo">
+            <a href="index.html"><img src="/images/logo.png" width="50%" alt=""> </a>
+        </div>
+        <div class="inner_main_menu">
+          <ul>
+            <li><a href="buscadoravanzado.html">BUSCADOR AVANZADO</a> </li>
+            <li>
+              <a href="#">GENEROS</a>
+              <div id="genres-list">
+              </div>
+            </li>
+            <li class="search_bar">
+              <form class="buscador" action="resultadosdelbuscador.html" method="get">
+                <button class="btn"><i class="fa fa-search"></i></button>
+                 <input id="buscador" type="text" name="" value="" required></form></li>
+
+
+            <li><a href="login.html">LOGIN</a> </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <div class="uk-grid-column-small uk-grid-row-large uk-child-width-1-5@s uk-text-center" uk-grid id="seriesgenero">
+     <!--<div>
+        <div class="uk-card uk-card-default uk-card-body"><img src="" alt=""></div>
+     </div>-->
+   </div>
+
+    <footer class="footer">
+    <div id="low_menu2">
+      <div class="logo2">
+        <img width="70%" src="/images/logoTMBDblue.png" alt="">
+      </div>
+    <div class="nombresIntegrantes"><h5>
+          Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+        </div>
+      </footer>
+    <script type="text/javascript" src="/javascripts/seriesporgenero.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+    <script src="/javascripts/navBar.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

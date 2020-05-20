@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buscador avanzado</title>
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/buscadoravanzado.css">
+    <link rel="stylesheet" href="/stylesheets/navBar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="header">
+      <div id="main_menu">
+        <div class="logo">
+            <a href="index.html"><img src="/images/logo.png" width="50%" alt=""> </a>
+        </div>
+        <div class="inner_main_menu">
+          <ul>
+            <li><a href="buscadoravanzado.html">BUSCADOR AVANZADO</a> </li>
+            <li>
+              <a href="#">GENEROS</a>
+              <div id="genres-list">
+              </div>
+            </li>
+            <li class="search_bar">
+              <form class="buscador" action="resultadosdelbuscador.html" method="get">
+                <button class="btn"><i class="fa fa-search"></i></button>
+                 <input id="buscador" type="text" name="" value="" required></form></li>
+
+
+            <li><a href="login.html">LOGIN</a> </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+<main class="main-buscadoravanzado">
+  <!-- COMIENZA BUSCADOR -->
+  <br><br><br><br><br>
+
+    <form id="form" method="get" action="resultadosdelbuscadoravanzado.html">
+      <fieldset>
+        <legend>Buscador avanzado:</legend><br><br>
+           <div>
+             <label>Elegir Genero: </label><br>
+             <select name="genre" id="selectGenre">
+<!-- lo trae el js -->
+             </select>
+           </div><br><br>
+           <div>
+
+             <label>Elegir Orden: </label><br>
+             <select name="order" id="selectOrder">
+               <option value="vote_average.asc">Mas votadas - Ascendente</option>
+               <option value="vote_average.desc">Mas votadas - Descendente</option>
+               <option value="first_air_date.asc">Lanzamiento - Ascendente</option>
+               <option value="first_air_date.desc">Lanzamiento - Descendente</option>
+               <option value="popularity.asc">Popularidad - Ascendente</option>
+               <option value="popularity.desc">Popularidad - Descendente</option>
+             </select>
+           </div><br><br>
+
+           <div>
+             <label>Año de Estreno:</label><br>
+             <input type="text" name="date_release" id="inputYear">
+           </div><br><br>
+          <article id="formulario"><button class="formulario" type="submit" name="button">Buscar</button></article>
+          </fieldset>
+         </form>
+
+
+</main>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <footer class="footer">
+
+  <div id="low_menu2">
+    <div class="logo2">
+      <img width="70%" src="/images/logoTMBDblue.png" alt="">
+    </div>
+  <div class="nombresIntegrantes"><h5>
+        Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+      </div>
+    </footer>
+<script type="text/javascript" src="/javascripts/buscadoravanzado.js"></script>
+<script src="/javascripts/navBar.js" charset="utf-8"></script>
+  </body>
+</html>
+<!-- formulario con tres cosas desplegable que muestre generos campo con año de estreno y otro campo para orden de los resultado -->
