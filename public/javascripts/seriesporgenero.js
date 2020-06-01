@@ -21,7 +21,7 @@ window.onscroll = function(ev) {
    for(var i = 0; i < series.length; i++){
      seriesGenero.innerHTML += `
      <div id="hola">
-        <a href=detalledeserie.html?id=${series[i].id}>
+        <a href=detalle?id=${series[i].id}>
         <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
         </a>
      </div>
@@ -42,7 +42,7 @@ fetch("https://api.themoviedb.org/3/discover/tv?api_key=c062382504198a6a2cc69f4b
   for(var i = 0; i < series.length; i++){
     seriesGenero.innerHTML += `
     <div id="hola">
-       <a href=detalledeserie.html?id=${series[i].id}>
+       <a href=/series/detalle?id=${series[i].id}>
        <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
        </a>
     </div>
@@ -62,7 +62,7 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f
 
  for(var i = 0; i < arrayGeneros.length; i++){
   listaParaGeneros.innerHTML += `
-    <div><a href=seriesporgenero.html?id=${arrayGeneros[i].id}&name=>${arrayGeneros[i].name}</a></div>
+    <div><a href=/genero?id=${arrayGeneros[i].id}>${arrayGeneros[i].name}</a></div>
    `;
  }
 

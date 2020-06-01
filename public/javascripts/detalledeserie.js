@@ -49,7 +49,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=c062382504198a6a2cc69f4b
       var idGenero = arrayGenero[i].id
       document.querySelector(".generos").innerHTML += `
         <div class="serie-info-box-content">
-        <a href=seriesporgenero.html?id=${idGenero}&genero=${nameGenero}><span class="titulogenero">${nameGenero}&nbsp;</span></a>
+        <a href=/genero?id=${idGenero}&genero=${nameGenero}><span class="titulogenero">${nameGenero}&nbsp;</span></a>
         </div>
       `;
     }
@@ -78,7 +78,7 @@ fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=c062382504198a6a2cc69f4b
       contenedorSimilares.innerHTML += `
       <li>
           <div class="uk-panel">
-             <a href=detalledeserie.html?id=${series[i].id}>
+             <a href=/series/detalle?id=${series[i].id}>
              <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
              </a>
           </div>
@@ -123,7 +123,7 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f
 
    for(var i = 0; i < arrayGeneros.length; i++){
     listaParaGeneros.innerHTML += `
-      <div><a href=seriesporgenero.html?id=${arrayGeneros[i].id}&name=>${arrayGeneros[i].name}</a></div>
+      <div><a href=/genero?id=${arrayGeneros[i].id}>${arrayGeneros[i].name}</a></div>
      `;
    }
 

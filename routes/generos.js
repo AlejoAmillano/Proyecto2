@@ -4,6 +4,5 @@ let generosController = require("../controllers/generosController");
 
 router.get("/", generosController.listado);
 
-router.get("/:id", generosController.detalle);
 
 module.exports = router;

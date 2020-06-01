@@ -36,7 +36,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
               <h1 class="titulo">${arraySeries[i].name}</h1>
               <h4 class="puntuacion">${arraySeries[i].vote_average} / 10&nbsp;&nbsp;<i class="fas fa-star"></i></h4>
               <p class="parrafo">${arraySeries[i].overview}</p>
-              <h4><a  class="ver-mas" href=detalledeserie.html?id=${arraySeries[i].id}>VER MÁS</a></h4>
+              <h4><a  class="ver-mas" href="/series/detalle?id=${arraySeries[i].id}">VER MÁS</a></h4>
           </div>
         </li>
     `;
@@ -62,7 +62,7 @@ fetch('https://api.themoviedb.org/3/tv/popular?api_key=c062382504198a6a2cc69f4b0
      contenedorPopulares.innerHTML += `
      <li>
          <div class="uk-panel">
-            <a href=detalledeserie.html?id=${series[i].id}>
+            <a href=/series/detalle?id=${series[i].id}>
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
             </a>
          </div>
@@ -87,7 +87,7 @@ fetch('https://api.themoviedb.org/3/tv/top_rated?api_key=c062382504198a6a2cc69f4
      contenedorValoradas.innerHTML += `
      <li>
          <div class="uk-panel">
-            <a href=detalledeserie.html?id=${series[i].id}>
+            <a href=/series/detalle?id=${series[i].id}>
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
             </a>
          </div>
@@ -112,7 +112,7 @@ fetch('https://api.themoviedb.org/3/tv/airing_today?api_key=c062382504198a6a2cc6
      contenedorHoy.innerHTML += `
      <li>
          <div class="uk-panel">
-            <a href=detalledeserie.html?id=${series[i].id}>
+            <a href=/series/detalle?id=${series[i].id}>
             <img src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
             </a>
          </div>
@@ -138,7 +138,7 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f
 
    for(var i = 0; i < arrayGeneros.length; i++){
     listaParaGeneros.innerHTML += `
-      <div><a href=seriesporgenero.html?id=${arrayGeneros[i].id}&name=>${arrayGeneros[i].name}</a></div>
+      <div><a href=/genero?id=${arrayGeneros[i].id}>${arrayGeneros[i].name}</a></div>
      `;
    }
 

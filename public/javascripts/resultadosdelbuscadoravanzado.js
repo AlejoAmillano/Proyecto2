@@ -25,7 +25,7 @@ window.addEventListener('load',function(){
 
           listaResultados.innerHTML += `
           <div id="hola">
-             <a href=detalledeserie.html?id=${unResultado.id}>
+             <a href=/series/detalle?id=${unResultado.id}>
              <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${unResultado.poster_path}" alt="">
              </a>
           </div>
@@ -55,7 +55,7 @@ window.addEventListener('load',function(){
 
           listaResultados.innerHTML += `
           <div id="hola">
-             <a href=detalledeserie.html?id=${unResultado.id}>
+             <a href=/series/detalle?id=${unResultado.id}>
              <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${unResultado.poster_path}" alt="">
              </a>
           </div>
@@ -79,7 +79,7 @@ window.addEventListener('load',function(){
 
      for(var i = 0; i < arrayGeneros.length; i++){
       listaParaGeneros.innerHTML += `
-        <div><a href=seriesporgenero.html?id=${arrayGeneros[i].id}&name=>${arrayGeneros[i].name}</a></div>
+        <div><a href=/genero?id=${arrayGeneros[i].id}>${arrayGeneros[i].name}</a></div>
        `;
      }
 
