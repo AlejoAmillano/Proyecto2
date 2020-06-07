@@ -21,7 +21,7 @@ window.onscroll = function(ev) {
    for(var i = 0; i < series.length; i++){
      seriesGenero.innerHTML += `
      <div id="hola">
-        <a href=detalle?id=${series[i].id}>
+        <a href=/series/detalle?id=${series[i].id}>
         <img class="imagenesgenero" src="https://image.tmdb.org/t/p/original/${series[i].poster_path}" alt="">
         </a>
      </div>

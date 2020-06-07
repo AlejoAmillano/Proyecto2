@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+      <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div id="main_menu">
+        <div class="logo">
+          <a href="/"><img src="/images/logo.png" width="50%" alt=""> </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="login">
+  <div id="login">
+<form class="login" action="http://localhost:3000/register" method="post">
+ <section>
+  <fieldset style="border-style: none;"><legend>Registrate en Club Series</legend><br><br><br>
+    <% include ./partials/messages %>
+    <br><br>
+    <article id="form">
+    <label>Email</label><br><input type="email" name="email" placeholder="Email" required><br><br>
+    <label>Nombre</label><br><input type="text" name="name" placeholder="Nombre" required><br><br>
+    <label>Password</label><br><input type="password" name="password" placeholder="Password" required><br><br>
+    </article>
+  <article id="formulario"><button type="submit" name="enviar" required>Registrar</button></article></fieldset>
+   </section>
+</fieldset>
+</form>
+</div>
+    </main>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+     <footer class="footer">
+       <div id="low_menu2">
+          <div class="logo2">
+            <img width="70%" src="/images/logoTMBDblue.png" alt="">
+          </div>
+        <div class="nombresIntegrantes"><h5>
+              Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+            </div>
+          </footer>
+
+<script type="text/javascript" src="/javascripts/login.js"></script>
+  </body>
+</html>

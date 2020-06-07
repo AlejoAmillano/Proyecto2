@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Detalle de serie</title>
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/detalledeserie.css">
+    <link rel="stylesheet" href="/stylesheets/navBar.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css">
+
+
+  </head>
+  <body>
+    <header class="header">
+      <div id="main_menu">
+        <div class="logo">
+  <a href="index.html"><img src="/images/logo.png" width="50%" alt=""> </a>
+        </div>
+        <div class="inner_main_menu">
+          <ul id="responsivemenu">
+            <li><a href="buscadoravanzado.html">BUSCADOR AVANZADO</a> </li>
+              <li>
+                <a href="#">GENEROS</a>
+                <div id="genres-list">
+                </div>
+              </li>
+            <li class="search_bar">
+              <form class="buscador" action="resultadosdelbuscador.html" method="get">
+                <button class="btn"><i class="fa fa-search"></i></button>
+                 <input id="buscador" type="text" name="buscarSerie" value="" required></form></li>
+
+
+            <li><a href="login.html">LOGIN</a> </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="contenedorDetalle">
+    <div class="Title">
+      <div class="container">
+
+    </div>
+    <br>
+    <div class="serie">
+      <div class="serie-info">
+        <div class="serie-info-container">
+          <div class="generos">
+
+          </div>
+          <div class="directors">
+
+          </div>
+          <div class="sinopsis">
+
+          </div>
+        </div>
+        <p uk-margin>
+         <a class="uk-button uk-button-default" href="#modal-media-youtube" uk-toggle id="titulotrailer">Trailer</a>
+        </p>
+        <div id="modal-media-youtube" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical" id="trailerserie">
+
+        </div>
+        </div>
+      </div>
+      <div class="serie-image"></div>
+    </div>
+  </div>
+    </div>
+<br>
+<div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider >
+  <div class="titles"><h2>RECOMENDACIONES</h2></div><br>
+  <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m uk-grid" id="similares">
+      <!--<li>
+          <div class="uk-panel">
+              <img src="img/batwoman.jpg" alt="">
+              <div class="uk-position-center uk-panel"><h1>1</h1></div>
+          </div>
+      </li>-->
+  </ul>
+
+  <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+  <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+</div><br><br>
+  <footer class="footer">
+
+  <div id="low_menu2">
+    <div class="logo2">
+      <img width="70%" src="/images/logoTMBDblue.png" alt="">
+    </div>
+  <div class="nombresIntegrantes"><h5>
+        Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+      </div>
+    </footer>
+
+<script type="text/javascript" src="/javascripts/detalledeserie.js"></script>
+<script src="/javascripts/navBar.js" charset="utf-8"></script>
+<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="https://kit.fontawesome.com/d13daeae51.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.js" charset="utf-8"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#responsivemenu').slicknav();
+  });
+</script>
+
+  </body>
+</html>

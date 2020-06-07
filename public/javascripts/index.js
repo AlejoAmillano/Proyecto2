@@ -1,4 +1,3 @@
-window.addEventListener('load', function(){
 
 // APIKey : c062382504198a6a2cc69f4b0fcd9319
 var queryString = location.search
@@ -157,4 +156,4 @@ fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=c062382504198a6a2cc69f
    }
  })
 
-})
+

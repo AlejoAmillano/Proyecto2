@@ -19,12 +19,16 @@
 
     <main class="login">
   <div id="login">
-<form class="login" action="index.html" method="get">
+<form class="login" action="/login" method="post">
  <section>
-  <fieldset> <legend>Inicia sesión en Club Series</legend><br><br><br>
-    <article id="form"><label>Email</label><br><input type="email" name="correo" placeholder="user@email.com" required><br><br>
-    <label>Password</label><br> <input type="password" name="contraseña" required><br><br></article>
-  <article id="formulario"><button type="submit" name="enviar" required>Submit</button></article></fieldset>
+  <fieldset style="border-style: none;"> <legend>Inicia sesión en Club Series</legend><br><br><br>
+    <% include ./partials/messages %>
+    <br><br>
+    <article id="form">
+    <label>Email</label><br><input type="email" name="email" placeholder="Email" required><br><br>
+    <label>Password</label><br><input type="password" name="password" placeholder="Contraseña" required><br></article>
+    <p style="font-size:x-large">¿No tenes un usuario? <a href="/register" style="color: rgb(179, 68, 68); text-decoration: none; ">Registrate ahora</a></p><br>
+  <article id="formulario"><button type="submit" name="enviar" required>Login</button></article></fieldset>
    </section>
 </fieldset>
 </form>
