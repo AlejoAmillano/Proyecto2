@@ -15,6 +15,7 @@
   content: "";
   margin-left: -150px;
   text-align: center;
+  z-index: 1;
 }
 
 .inner_main_menu{
