@@ -210,12 +210,15 @@ body, html {
 
 .uk-comment-primary {
   padding: 35px;
-  background-color: #484848 !important;
+  background-color: #202020 !important;
   width: 74%;
   position: relative;
   bottom: 3rem;
   left: 12rem;
   margin-bottom: 25px;
+}
+.uk-margin-remove{
+  color: white;
 }
 
 /*mobile*/

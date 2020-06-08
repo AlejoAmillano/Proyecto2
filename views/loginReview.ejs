@@ -19,37 +19,43 @@
 
     <main class="login">
   <div id="login">
-<% if (tipo == "delete") { %>
 
-  <form class="login" action="/reviews/delete/<%= deleteId %>" method="post">
-    <section>
-     <fieldset style="border-style: none;"> <legend>Inicia sesion para borrar esta reseña</legend><br><br><br>
-       <% include ./partials/messages %>
-       <br><br>
-       <article id="form">
-       <label>Email</label><br><input type="email" name="email" placeholder="Email" required><br><br>
-       <label>Password</label><br><input type="password" name="password" placeholder="Contraseña" required><br></article>
-       <p style="font-size:x-large">¿No tenes un usuario? <a href="/register" style="color: rgb(179, 68, 68); text-decoration: none; ">Registrate ahora</a></p><br>
-     <article id="formulario"><button type="submit" name="enviar" required>CONFIRMAR</button></article></fieldset>
-      </section>
-   </fieldset>
-   </form>
+    <% if (tipo == "delete") { %>
+      <form class="login" action="/reviews/delete/<%= deleteId %>" method="post">
+        <section>
+         <fieldset style="border-style: none;"> <legend>Inicia sesion para borrar esta reseña</legend><br><br><br>
+           <% include ./partials/messages %>
+           <br><br>
+           <article id="form">
+           <label>Email</label><br><input type="email" name="email" placeholder="Email" required><br><br>
+           <label>Password</label><br><input type="password" name="password" placeholder="Contraseña" required><br></article>
+           <p style="font-size:x-large">¿No tenes un usuario? <a href="/register" style="color: rgb(179, 68, 68); text-decoration: none; ">Registrate ahora</a></p><br>
+         <article id="formulario"><button type="submit" name="enviar" required>CONFIRMAR</button></article></fieldset>
+          </section>
+       </fieldset>
+       </form>
+    
+      <% } else { %>
+        <form class="login" action="/reviews" method="post">
+          <section>
+           <fieldset style="border-style: none;"> <legend>Inicia sesión en Club Series</legend><br><br><br>
+             <% include ./partials/messages %>
+             <br><br>
+             <article id="form">
+             <label>Email</label><br><input type="email" name="email" placeholder="Email" required><br><br>
+             <label>Password</label><br><input type="password" name="password" placeholder="Contraseña" required><br></article>
+             <p style="font-size:x-large">¿No tenes un usuario? <a href="/register" style="color: rgb(179, 68, 68); text-decoration: none; ">Registrate ahora</a></p><br>
+           <article id="formulario"><button type="submit" name="enviar" required>Login</button></article></fieldset>
+            </section>
+         </fieldset>
+         </form>
+        <% } %>
 
-  <% } else { %>
-    <form class="login" action="/reviews" method="post">
-      <section>
-       <fieldset style="border-style: none;"> <legend>Inicia sesión en Club Series</legend><br><br><br>
-         <% include ./partials/messages %>
-         <br><br>
-         <article id="form">
-         <label>Email</label><br><input type="email" name="email" placeholder="Email" required><br><br>
-         <label>Password</label><br><input type="password" name="password" placeholder="Contraseña" required><br></article>
-         <p style="font-size:x-large">¿No tenes un usuario? <a href="/register" style="color: rgb(179, 68, 68); text-decoration: none; ">Registrate ahora</a></p><br>
-       <article id="formulario"><button type="submit" name="enviar" required>Login</button></article></fieldset>
-        </section>
-     </fieldset>
-     </form>
-    <% } %>
+
+    
+
+     
+
 </div>
     </main>
 <br><br><br><br><br><br><br><br><br><br><br><br>
@@ -59,7 +65,7 @@
             <img width="70%" src="/images/logoTMBDblue.png" alt="">
           </div>
         <div class="nombresIntegrantes"><h5>
-              Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+              Alejo Amillano | Matias Evangelista </h5><h6>Copyright© 2019</h6>
             </div>
           </footer>
 

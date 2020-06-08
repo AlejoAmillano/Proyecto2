@@ -1,6 +1,8 @@
 let models = require("../db/models/index");
 let bcrypt = require("bcryptjs");
 let moduloLogin = require('../config/loginModule')
+let op = models.Sequelize.Op;
+
 
 module.exports = {
 
@@ -116,7 +118,7 @@ module.exports = {
 	},
 	
 	logReview: function (req, res) {
-		res.render('loginReview')
+		res.render('loginReview', { tipo: "loginReseña"})
 	},
 
 	confirmLogReview: function(req, res) {
@@ -201,16 +203,16 @@ module.exports = {
 	res.render('searchUser');
  },
  searchUserResult: function(req, res){
-	db.User.findAll({
+	models.User.findAll({
 		where: {
 			[op.or]: {
-				email: {[op.like]: "%" + req.query.searUser + "%"},
-				username: {[op.like]: "%" + req.query.searchUser + "%"}
+				email: {[op.like]: "%" + req.query.searchUser + "%"},
+				name: {[op.like]: "%" + req.query.searchUser + "%"}
 			}
 		}
 	})
 	.then(function(resultado){
-		res.render('searchUserResults',{
+		res.render('searchUserResult',{
 			users: resultado
 		})
 	})

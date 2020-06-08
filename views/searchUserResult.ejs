@@ -6,7 +6,7 @@
     <title>Buscador avanzado</title>
     <link rel="stylesheet" href="/stylesheets/footer.css">
     <link rel="stylesheet" href="/stylesheets/navBar.css">
-    <link rel="stylesheet" href="/stylesheets/buscadoravanzado.css">
+    <link rel="stylesheet" href="/stylesheets/searchuserresult.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
@@ -27,6 +27,7 @@
               </div>
             </li>
             <li><a href="/searchUser">BUSCAR USUARIOS</a></li>
+
             <li class="search_bar">
               <form class="buscador" action="resultadosdelbuscador.html" method="get">
                 <button class="btn"><i class="fa fa-search"></i></button>
@@ -41,39 +42,34 @@
 
 <main>
 
-  <% if (resultado.length == 0) { %>
-
-    <h2 class="elh2">Este usuario no ha hecho ninguna reseña todavía</h2>
-
-    <% } else { %>
-
-      <h2 class="elh2">RESEÑAS DE <%= resultado[0].username%></h2>
-
-  <% for(let i = 0; i < resultado.length; i++) { %>
-    
-    <article class="uk-comment uk-comment-primary">
-      <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-          <div class="uk-width-auto">
-              <img class="uk-comment-avatar" src="/images/avatar.png" width="80" height="80" alt="">
+  <% if(users.length > 0) { %>
+    <h2 class="elh2">ESTOS SON LOS RESULTADOS DE TU BUSQUEDA</h2>
+    <% for(let i = 0; i < users.length; i++) { %>
+  <div class="container">
+    <div class="row mb20">
+      <div class="col-md-12">
+  
+        <div class="candidate">
+          <div class="candidate__header clearfix mb20">
+            <img class="candidate__img" src="/images/avatar.png">
+  
+            <div class="candidate__details">
+              <h1 class="candidate__fullname"><%= users[i].name%></h1>
+              <h2 class="candidate__location"><a href="/reviews/<%= users[i].id%>">Perfil de reseñas</a></h2>
+            </div>
           </div>
-          <div class="uk-width-expand">
-              <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#"><%= resultado[i].username%></a></h4>
-              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                  <li>&nbsp;&nbsp;<%= resultado[i].puntaje%>&nbsp;&nbsp;<i class="fas fa-star"></i></li>
-                  <li><a href="/reviews/edit/<%= resultado[i].id%>">Editar reseña</a></li>
-                  <li><a href="/series/detalle?id=<%= resultado[i].idserie%>">Ir a la pelicula</a></li>
-                  <li><a href="/reviews/delete/<%= resultado[i].id%>">Borrar reseña</a></li>
-              </ul>
-          </div>
-      </header>
-      <div class="uk-comment-body">
-          <p><%= resultado[i].text%></p>
-      </div>
-  </article>
-
-    <% } %> 
+          <ul class="list-inline">
+            <li><span class="candidate__years">Email: <%= users[i].email%></span> <span class="candidate__title">Usuario numero: <%= users[i].id%></span></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>    
+    </div>
+  </div>
   <% } %>
-
+<% } else {%>
+  <h2 class="elh2">NO SE ENCONTRARON USUARIOS</h2>
+  <% } %>
 </main>
 
   <br><br><br><br><br><br><br><br><br><br><br><br><br>

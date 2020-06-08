@@ -23,5 +23,7 @@ router.post('/reviews/edit/:id', controllers.registerController.confirmEdit)
 //rutas de buscar usuarios
 
 router.get('/searchUser', controllers.registerController.searchForm)
+router.get('/searchUser/results', controllers.registerController.searchUserResult)
+
 
 module.exports = router;

@@ -6,10 +6,12 @@
 }
 .uk-search-default {
     position: relative;
-    left: 35%;
-    top: 50%;
+    left: 30%;
+    top: 60%;
 }
 
-.uk-search-input{
-    width: 200px;
+.uk-search-default .uk-search-icon:not(.uk-search-icon-flip)~.uk-search-input {
+    padding-left: 40px;
+    width: 600px;
+    height: 50px;
 }
