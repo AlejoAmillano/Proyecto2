@@ -3,6 +3,7 @@
 .uk-margin{
     height: 30rem !important;
     background-color: black;
+    margin-bottom: unset !important;
 }
 .uk-search-default {
     position: relative;
@@ -12,6 +13,6 @@
 
 .uk-search-default .uk-search-icon:not(.uk-search-icon-flip)~.uk-search-input {
     padding-left: 40px;
-    width: 600px;
+    width: 650px;
     height: 50px;
 }
