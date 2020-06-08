@@ -1,86 +1,29 @@
-*{box-sizing:border-box;}
+*{box-sizing: border-box;}
 body{
   font-family: 'Oswald', sans-serif;
   line-height: 1.5em;
   background-color: black;
-  color:white;
+  color: white;
   margin: 0 auto;
 }
-#form{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-}
-label{
-  display: flex;
-  position: absolute;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-}
- .main-buscadoravanzado{
-  width:100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:center;
-  padding: 20px;
+
+.elh2{
+  font-size: 2rem;
   position: relative;
-  top:210px;
+  text-align: center;
+  top: 13rem;
+  font-weight: 700;
+  color: white;
 }
 
-legend{
-  font-size: 40px;
-}
-label{
-  font-size: 20px;
+.uk-comment-primary {
+  padding: 35px;
+  background-color: #484848 !important;
+  width: 74%;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-}
-#inputYear{
-  font-size: 140%;
-  border-radius: 5px;
-  position: relative;
-  background-color: black;
-  border: solid 1px white;
-  color: white;
-  padding: 2px;
-}
-#formulario{
- width: 100%;
- position: relative;
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
-}
-.formulario{
-  font-size: 120%;
-  border: solid 1px white;
-  color: white;
-  background-color: black;
-  padding: 10px;
-  border-radius: 5px;
-}
-#selectGenre{
-  font-size: 120%;
-  border-radius: 5px;
-  position: relative;
-  background-color: black;
-  border: solid 1px white;
-  color: white;
-  padding: 2px;
-}
-#selectOrder{
-  font-size: 120%;
-  border-radius: 5px;
-  position: relative;
-  background-color: black;
-  border: solid 1px white;
-  color: white;
-  padding: 2px;
+  top: 15rem;
+  left: 12rem;
+  margin-bottom: 25px;
 }
 
 /*tablet*/

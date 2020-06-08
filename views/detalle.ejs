@@ -34,8 +34,6 @@
               <form class="buscador" action="resultadosdelbuscador.html" method="get">
                 <button class="btn"><i class="fa fa-search"></i></button>
                  <input id="buscador" type="text" name="buscarSerie" value="" required></form></li>
-
-
             <li><a href="/login">LOGIN</a> </li>
           </ul>
         </div>
@@ -65,7 +63,6 @@
         </p>
         <div id="modal-media-youtube" class="uk-flex-top" uk-modal>
         <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical" id="trailerserie">
-
         </div>
         </div>
       </div>
@@ -74,6 +71,64 @@
   </div>
     </div>
 <br>
+
+<h2 class="elh2">RESEÑAS DE USUARIOS</h2>
+
+<% if(resenias.length > 0) { %>
+  <% for(let i = 0; i < resenias.length; i++) { %>
+    <article class="uk-comment uk-comment-primary">
+      <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+              <img class="uk-comment-avatar" src="/images/avatar.png" width="80" height="80" alt="">
+          </div>
+          <div class="uk-width-expand">
+              <h4 class="uk-comment-title uk-margin-remove"><%= resenias[i].username%></h4>
+              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                  <li>&nbsp;&nbsp;<%= resenias[i].puntaje%>&nbsp;&nbsp;<i class="fas fa-star"></i> </li>
+                  <li><a href="#">Profile</a></li>
+              </ul>
+          </div>
+      </header>
+      <div class="uk-comment-body">
+          <p><%= resenias[i].text%></p>
+      </div>
+    </article>
+    <% } %>
+<% } else {%>
+     <h2 style="text-align: center; color: white; font-weight: 500; font-size:x-large; bottom: 3rem; position: relative;">Nadie escribio una reseña todavía. ¡Sé el primero!</h2>
+  <% } %>
+
+<form action="/createReview" method="post">
+  <fieldset class="uk-fieldset">
+
+      <legend class="uk-legend">HAZ UNA RESEÑA DE ESTA SERIE</legend>
+
+      <div>
+        <input type="hidden" name="idserie" value="<%= id %>">
+      </div>
+      <div class="uk-margin">
+          <input class="uk-input" type="email" name="email" placeholder="Email">
+      </div>
+
+      <div class="uk-margin">
+          <input class="uk-input" type="password" name="password" placeholder="Contraseña">
+      </div>
+
+      <div class="uk-margin">
+          <textarea class="uk-textarea" id="text" cols="30" rows="5" name="text" placeholder="Escriba aqui su reseña.."></textarea>
+      </div>
+
+      <div class="uk-margin">
+          <input class="uk-range" name="puntaje" type="range" value="0" min="0" max="10" step="1"  oninput="document.getElementById('tPrice').innerHTML = this.value">
+          <label id="tPrice" style="font-size: larger;"></label>
+      </div>
+
+      <div class="uk-margin">
+        <button class="uk-button uk-button-default" type="submit" name="enviar">ENVIAR</button>
+    </div>
+
+  </fieldset>
+</form>
 <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider >
   <div class="titles"><h2>RECOMENDACIONES</h2></div><br>
   <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-5@m uk-grid" id="similares">

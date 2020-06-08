@@ -173,6 +173,51 @@ body, html {
   position: relative;
   bottom: 1.5rem;
 }
+
+.uk-fieldset{
+  width: 40%;
+  left: 30%;
+  position: relative;
+}
+
+.uk-legend{
+  text-align: center;
+  font-weight: 700;
+  
+}
+
+.uk-input,
+.uk-textarea{
+  background: black !important;
+}
+
+.uk-button-default{
+  color: white !important;
+}
+
+.uk-margin{
+  text-align: center;
+}
+
+.elh2{
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+  bottom: 4rem;
+  font-weight: 700;
+  color: white;
+}
+
+.uk-comment-primary {
+  padding: 35px;
+  background-color: #484848 !important;
+  width: 74%;
+  position: relative;
+  bottom: 3rem;
+  left: 12rem;
+  margin-bottom: 25px;
+}
+
 /*mobile*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 768px) {
 .container{
@@ -228,3 +273,4 @@ body, html {
   right: 1.5rem;
 }
 }
+

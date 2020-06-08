@@ -12,7 +12,6 @@ var detailRouter = require('./routes/detalle');
 var resultRouter = require('./routes/resultados');
 var genreRouter = require('./routes/generos');
 var advancedRouter = require('./routes/buscadoravanzado');
-var advancedsearchRouter = require('./routes/resultadosavanzado');
 
 var app = express();
 
@@ -36,7 +35,6 @@ app.use('/series/detalle', detailRouter);
 app.use('/resultados', resultRouter);
 app.use('/genero', genreRouter);
 app.use('/avanzado/', advancedRouter);
-app.use('/avanzado/search', advancedsearchRouter);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

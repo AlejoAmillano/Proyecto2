@@ -3,7 +3,7 @@ let operadores = db.Sequelize.Op;
 
 let resultadosController = {
 
-    'result': function(req, res, next){
+    result: function(req, res, next){
         res.render('resultadosdelbuscador');
     }
     

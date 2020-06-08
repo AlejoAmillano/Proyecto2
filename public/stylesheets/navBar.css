@@ -1,4 +1,3 @@
-*{box-sizing: border-box;}
 
 #main_menu{
   width: 100%;
@@ -29,6 +28,7 @@
   text-align: right;
   position: relative;
   top: -10px;
+  padding-left: 10px;
 }
 .inner_main_menu li{
   float: none;
@@ -43,10 +43,10 @@
 
 }
 .inner_main_menu li:nth-child(3){
-  padding-right: 30px;
+  right: 29%;
 }
 .inner_main_menu li:nth-child(4){
-  padding-right: 60px;
+  right: 10%;
 }
 
 .inner_main_menu li a{

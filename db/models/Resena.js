@@ -1,7 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
     let cols = {
-        idresenias: {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true
@@ -12,10 +12,19 @@ module.exports = (sequelize, DataTypes) => {
         idusuario: {
             type: DataTypes.INTEGER
         },
-        text_res: {
+        username: {
             type: DataTypes.STRING
         },
-        fecha_de_creacion: {
+        text: {
+            type: DataTypes.STRING
+        },
+        puntaje: {
+            type: DataTypes.DOUBLE
+        },
+        createdAt: {
+            type: DataTypes.DATE
+        },
+        updatedAt: {
             type: DataTypes.DATE
         }
     };
@@ -26,6 +35,10 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Resena = sequelize.define("Resena", cols, config);
+    
+    Resena.associate = function(models) {
+        Resena.belongsTo(models.User, {foreignKey: 'idusuario', as: 'usuario'})
+    };
 
     return Resena;
     

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="/stylesheets/footer.css">
+    <link rel="stylesheet" href="/stylesheets/navBar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
+      <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="/stylesheets/editarReview.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div id="main_menu">
+        <div class="logo">
+    <a href="/"><img src="/images/logo.png" width="50%" alt=""> </a>
+        </div>
+        <div class="inner_main_menu">
+          <ul id="responsivemenu">
+            <li><a href="/avanzado/">BUSCADOR AVANZADO</a> </li>
+              <li>
+                <a href="#">GENEROS</a>
+                <div id="genres-list">
+                </div>
+              </li>
+            <li class="search_bar">
+              <form class="buscador" action="resultadosdelbuscador.html" method="get">
+                <button class="btn"><i class="fa fa-search"></i></button>
+                 <input id="buscador" type="text" name="buscarSerie" value="" required></form></li>
+            <li><a href="/login">LOGIN</a> </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+  <div>
+    
+    <form action="/reviews/edit/<%= resultado.id %>" method="post">
+      <fieldset class="uk-fieldset">
+    
+          <legend class="uk-legend">EDITA TU RESEÑA</legend>
+    
+          <div class="uk-margin">
+              <input class="uk-input" type="email" name="email" placeholder="Email">
+          </div>
+    
+          <div class="uk-margin">
+              <input class="uk-input" type="password" name="password" placeholder="Contraseña">
+          </div>
+    
+          <div class="uk-margin">
+              <textarea class="uk-textarea" id="text" cols="30" rows="5" name="text" placeholder="Escriba aqui su reseña.."><%= resultado.text %></textarea>
+          </div>
+    
+          <div class="uk-margin">
+              <input class="uk-range" name="puntaje" type="range" value="0" min="0" max="10" step="1"  oninput="document.getElementById('tPrice').innerHTML = this.value">
+              <label id="tPrice" style="font-size: larger;"></label>
+          </div>
+    
+          <div class="uk-margin">
+            <button class="uk-button uk-button-default" type="submit" name="enviar">ENVIAR</button>
+        </div>
+    
+      </fieldset>
+    </form>
+
+</div>
+    </main>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+     <footer class="footer">
+       <div id="low_menu2">
+          <div class="logo2">
+            <img width="70%" src="/images/logoTMBDblue.png" alt="">
+          </div>
+        <div class="nombresIntegrantes"><h5>
+              Alejo Amillano | Camila Forletta </h5><h6>Copyright© 2019</h6>
+            </div>
+          </footer>
+
+<script type="text/javascript" src="/javascripts/login.js"></script>
+<script src="/javascripts/editarReview.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
+<script src="/javascripts/navBar.js"></script>
+  </body>
+</html>

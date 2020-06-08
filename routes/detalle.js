@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-let detalleController = require("../controllers/detalleController");
+let controllers = require("../controllers");
 
-router.get("/", detalleController.detail);
+router.get('/', controllers.detalleController.detail);
 
 module.exports = router;

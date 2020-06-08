@@ -1,0 +1,15 @@
+*{box-sizing: border-box;}*
+
+.uk-margin{
+    height: 30rem !important;
+    background-color: black;
+}
+.uk-search-default {
+    position: relative;
+    left: 35%;
+    top: 50%;
+}
+
+.uk-search-input{
+    width: 200px;
+}

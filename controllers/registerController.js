@@ -95,8 +95,141 @@ module.exports = {
 
 	//RESEÑAS
 
-	/*getReviews: function (req, res) {
-		models.Review.findAll()
-	}*/
+	create: function(req, res) {
+		moduloLogin.validar(req.body.email, req.body.password)
+		.then(function(usuario) {
+			if (usuario != undefined) {
+				models.Resena.create({
+					idserie: req.body.idserie,
+					idusuario: usuario.id,
+					username: usuario.name,
+					text: req.body.text,
+					puntaje: req.body.puntaje
+				})
+				.then(function() {
+					res.redirect('/series/detalle?id=' + req.body.idserie)
+				})
+			} else {
+				res.send("Hubo un error al crear esta reseña")
+			}
+		})
+	},
+	
+	logReview: function (req, res) {
+		res.render('loginReview')
+	},
 
-};
+	confirmLogReview: function(req, res) {
+		moduloLogin.validar(req.body.email, req.body.password)
+		.then(resultado=>{
+			if (resultado == undefined) {
+				res.redirect('/reviews');
+			} else {
+				res.redirect('/reviews/'+resultado.id);
+			}
+		})
+	},
+
+	getReviews: function (req, res) {
+		models.Resena.findAll({
+			where: [
+				{idusuario: req.params.id}
+			],
+			include: ["usuario"]
+		})
+		.then(resultado=>{
+			res.render('buscadoravanzado', {resultado: resultado})
+		})
+	},
+
+	deleteReview: function (res,req) {
+		res.render('loginReview', { tipo: "delete", deleteId: req.params.id})
+	},
+
+	confirmDelete: function (req, res) {
+		moduloLogin.validar(req.body.email, req.body.password)
+	.then(resultado=>{
+		if (resultado != null) {
+			models.Resena.destroy({
+				where:{
+					id: req.params.id
+				}
+			})
+			res.redirect('/reviews')
+		} else {
+			res.redirect('/reviews/delete/'+req.params.id)
+		}
+	})	
+  },
+
+  showEdit: function (req, res) {
+	  models.Resena.findOne({
+		  where: [
+			  {id:req.params.id}
+		  ]
+	  })
+	  .then(resultado=>{
+		  res.render('editarReview', {resultado: resultado})
+	  })
+  },
+
+  confirmEdit: function (req, res) {
+	  let updateR = {
+		  text: req.body.text,
+		  puntaje: req.body.puntaje,
+		  id: req.params.id
+	  }
+	  models.Resena.update({
+		  text: updateR.text,
+          puntaje: updateR.puntaje
+	  },{
+		  where:{
+			  id: updateR.id
+		  }
+	  })
+	  .then(()=>{
+		models.Resena.findByPk(req.params.id)
+		.then(resultado=>{
+			res.redirect('/reviews/'+ resultado.idusuario)
+		})
+	})
+ },
+
+ //BUSCAR USUARIOS
+
+ searchForm: function(req, res) {
+	res.render('searchUser');
+ },
+ searchUserResult: function(req, res){
+	db.User.findAll({
+		where: {
+			[op.or]: {
+				email: {[op.like]: "%" + req.query.searUser + "%"},
+				username: {[op.like]: "%" + req.query.searchUser + "%"}
+			}
+		}
+	})
+	.then(function(resultado){
+		res.render('searchUserResults',{
+			users: resultado
+		})
+	})
+ },
+ searchById: function(req, res) {
+	models.User.findByPk(req.params.id)
+	.then(function(usuario) {
+		models.Resena.findAll({
+			where: {
+				idusuario: usuario.id
+			}
+		})
+		.then(function(reviews){
+			res.render('userDetail', {
+				user: usuario,
+				resenias: reviews
+			})
+		})  
+	})
+  }
+
+ }

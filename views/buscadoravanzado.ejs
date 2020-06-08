@@ -5,9 +5,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Buscador avanzado</title>
     <link rel="stylesheet" href="/stylesheets/footer.css">
-    <link rel="stylesheet" href="/stylesheets/buscadoravanzado.css">
     <link rel="stylesheet" href="/stylesheets/navBar.css">
+    <link rel="stylesheet" href="/stylesheets/buscadoravanzado.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Oswald:400&display=swap" rel="stylesheet">
   </head>
   <body>
@@ -37,42 +38,43 @@
       </div>
     </header>
 
-<main class="main-buscadoravanzado">
-  <!-- COMIENZA BUSCADOR -->
-  <br><br><br><br><br>
+<main>
 
-    <form id="form" method="get" action="/avanzado/search">
-      <fieldset>
-        <legend>Buscador avanzado:</legend><br><br>
-           <div>
-             <label>Elegir Genero: </label><br>
-             <select name="genre" id="selectGenre">
-<!-- lo trae el js -->
-             </select>
-           </div><br><br>
-           <div>
+  <% if (resultado.length == 0) { %>
 
-             <label>Elegir Orden: </label><br>
-             <select name="order" id="selectOrder">
-               <option value="vote_average.asc">Mas votadas - Ascendente</option>
-               <option value="vote_average.desc">Mas votadas - Descendente</option>
-               <option value="first_air_date.asc">Lanzamiento - Ascendente</option>
-               <option value="first_air_date.desc">Lanzamiento - Descendente</option>
-               <option value="popularity.asc">Popularidad - Ascendente</option>
-               <option value="popularity.desc">Popularidad - Descendente</option>
-             </select>
-           </div><br><br>
+    <h2 class="elh2">Este usuario no ha hecho ninguna reseña todavía</h2>
 
-           <div>
-             <label>Año de Estreno:</label><br>
-             <input type="text" name="date_release" id="inputYear">
-           </div><br><br>
-          <article id="formulario"><button class="formulario" type="submit" name="button">Buscar</button></article>
-          </fieldset>
-         </form>
+    <% } else { %>
 
+      <h2 class="elh2">RESEÑAS DE <%= resultado[0].username%></h2>
+
+  <% for(let i = 0; i < resultado.length; i++) { %>
+    
+    <article class="uk-comment uk-comment-primary">
+      <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+          <div class="uk-width-auto">
+              <img class="uk-comment-avatar" src="/images/avatar.png" width="80" height="80" alt="">
+          </div>
+          <div class="uk-width-expand">
+              <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#"><%= resultado[i].username%></a></h4>
+              <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                  <li>&nbsp;&nbsp;<%= resultado[i].puntaje%>&nbsp;&nbsp;<i class="fas fa-star"></i></li>
+                  <li><a href="/reviews/edit/<%= resultado[i].id%>">Editar reseña</a></li>
+                  <li><a href="/series/detalle?id=<%= resultado[i].idserie%>">Ir a la pelicula</a></li>
+                  <li><a href="/reviews/delete/<%= resultado[i].id%>">Borrar reseña</a></li>
+              </ul>
+          </div>
+      </header>
+      <div class="uk-comment-body">
+          <p><%= resultado[i].text%></p>
+      </div>
+  </article>
+
+    <% } %> 
+  <% } %>
 
 </main>
+
   <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="footer">
 
@@ -86,6 +88,8 @@
     </footer>
 <script type="text/javascript" src="/javascripts/buscadoravanzado.js"></script>
 <script src="/javascripts/navBar.js" charset="utf-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit.min.js"></script>
+<script src="https://kit.fontawesome.com/d13daeae51.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js"></script>
   </body>
 </html>
-<!-- formulario con tres cosas desplegable que muestre generos campo con año de estreno y otro campo para orden de los resultado -->

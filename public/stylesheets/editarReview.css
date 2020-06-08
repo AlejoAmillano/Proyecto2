@@ -1,0 +1,32 @@
+*{box-sizing: border-box;}*
+body {
+    background-color: black;
+}
+
+.uk-fieldset{
+    width: 40%;
+    left: 30%;
+    position: relative;
+    top: 12rem;
+  }
+  
+  .uk-legend{
+    text-align: center;
+    font-weight: 700;
+    color: white;
+    
+  }
+  
+  .uk-input,
+  .uk-textarea{
+    background: black !important;
+  }
+  
+  .uk-button-default{
+    color: white !important;
+  }
+  
+  .uk-margin{
+    text-align: center;
+  }
+  
